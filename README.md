@@ -1,54 +1,40 @@
-# React + TypeScript + Vite
+# GitHub Activity Viewer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A sleek and minimal web application that takes a GitHub username as input and displays their public activity metrics, including:
 
-Currently, two official plugins are available:
+- 📦 A list of public repositories  
+- 📊 A daily commit activity chart (advanced)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- **GitHub Repo List** – Fetch and display all public repositories of a user.
+- **Daily Commits Graph** – Visualize recent commit activity from GitHub Events API.
+- **Responsive UI** – Fully responsive and built with modern design.
+- **Tooling** – Built using React, TailwindCSS, React Query, and Recharts.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🖼️ Live Preview
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+🌐 [Visit Site](https://briahsoft-nkca122.onrender.com)
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React + TypeScript  
+- **UI**: TailwindCSS + ShadCN UI + Lucide Icons  
+- **Data Fetching**: Axios + React Query  
+- **Charts**: Recharts  
+
+---
+
+## 📦 Installation
+Get a github access token, then
+- Clone the project and get started locally:
+
+```bash
+git clone https://github.com/Nkca122/BFK_Candidate_Test.git
+cd BFK_Candidate_Test
+echo VITE_GITHUB_API=https://api.github.com > .env
+echo VITE_GITHUB_TOKEN=your_personal_access_token >> .env
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
