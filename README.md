@@ -38,3 +38,13 @@ npm install
 npm run dev
 ```
 
+if using .zip then, say you extracted to ```/your_location```
+```bash
+cd /your_location
+echo VITE_GITHUB_API=https://api.github.com > .env
+echo VITE_GITHUB_TOKEN=your_personal_access_token >> .env
+npm install
+npm run dev
+```
+
+
